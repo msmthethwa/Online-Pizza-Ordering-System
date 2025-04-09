@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Palace - Order Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-pizza-slice"></i> Pizza Palace</h1>
+        <p>Customize your perfect pizza!</p>
+        <div class="currency-selector">
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <option value="USD">US Dollar ($)</option>
+                <option value="ZAR">South African Rand (R)</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="pizza-customization">
+            <h2>Build Your Pizza</h2>
+            
+            <div class="customization-section">
+                <h3>Size</h3>
+                <div class="size-options">
+                    <!-- Size options will be added by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="customization-section">
+                <h3>Toppings</h3>
+                <div class="topping-options">
+                    <!-- Topping options will be added by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="price-display">
+                <h3>Current Price: <span id="current-price">$0.00</span></h3>
+                <button id="add-to-cart" class="btn">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="shopping-cart">
+            <h2>Your Order <i class="fas fa-shopping-cart"></i></h2>
+            <div id="cart-items">
+                <p class="empty-cart-message">Your cart is empty</p>
+                <!-- Cart items will be added by JavaScript -->
+            </div>
+            <div id="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row discount">
+                    <span>Discount (10% off orders over $20):</span>
+                    <span id="discount">-$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button id="place-order" class="btn" disabled>Place Order</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Order Confirmation</h2>
+            <div id="order-details">
+                <!-- Order details will be added by JavaScript -->
+            </div>
+            <button id="confirm-order" class="btn">Confirm Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
